@@ -29,7 +29,7 @@ _Example: connect as user 'root' to server at 159.65.222.96 and port 22_
 
 ![ssh login](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fws3rlc2asj4vf7phdf1.png)
 
-####Adding a user to a Linux server
+#### Adding a user to a Linux server
 
 To add/create a new user, all you have to do is ‘useradd‘ or ‘adduser‘ with ‘username’. The ‘username’ is a user login name, that is used by user to login into the system.
 
