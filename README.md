@@ -155,6 +155,9 @@ scp username@linux_server_ip:/path/to/remote/file C:\path\to\local\destination
 - **_/path/to/remote/file_**: The absolute path on the Linux server. 
 - **_C:\path\to\local\destination_**: The local Windows directory where the file will be saved.
 
+Copying files from Windows machine to a specific user on a Linux server using scp
+
+![scp -r](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qq2fjj4k830bkhm08gkd.png)
 
 **rm (Remove)**
 Deletes files or directories.
