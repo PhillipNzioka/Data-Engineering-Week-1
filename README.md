@@ -1,21 +1,21 @@
 # Data-Engineering-Week-1
 Summary of what I have learnt in one week as a data engineering student
 
-#What is Linux?
+# What is Linux?
 Linux is a free, open-source operating system by Linus Torvalds in 1991. It is a Unix-like system based on a monolithic kernel that manages hardware resources likes the CPU, memory, and storage, serving as the bridge between software applications and physical hardware.
 
 Linux is the foundational operating system for modern data engineering, powering the vast majority of cloud infrastructure (AWS, Azure, GCP) and big data tools like Spark, Kafka, and Airflow.  It is essential for data engineers because it provides the stability, performance, and automation capabilities required to manage large-scale data pipelines and remote servers efficiently.
 
-##Key aspects of Linux in data engineering include:
+## Key aspects of Linux in data engineering include:
 
 -**Cloud and Tool Dominance**: Nearly all cloud virtual machines, containers (Docker/Kubernetes), and distributed compute systems run on Linux by default. 
 -**Automation and Scripting**: Linux enables seamless automation of ETL pipelines and data tasks through Bash shell scripting and CRON jobs. 
 -**Core Command Line Skills**: Data engineers must master terminal commands for file navigation (ls, cd), process management (ps, top), and text editing (nano, vi) to debug pipelines and configure systems directly on servers. 
 -**File System and Permissions**: Understanding the Linux tree structure and managing file permissions (chmod, chown) is critical for handling sensitive data and ensuring secure data movement between systems.
 
-##Linux Essentials
+## Linux Essentials
 
-####Basic SSH connection
+#### Basic SSH connection
 SSH (Secure Shell) lets you open an encrypted terminal session to a remote machine, typically with `ssh @<server_address>`.
 On first connect, you’ll be asked to verify the server’s host key, then authenticate with a password or—preferably—an SSH key you created with ssh-keygen and installed via ssh-copy-id.
 If the server uses a custom port, add `-p` , and if you need a specific key file, use `-i <path_to_private_key>`.
@@ -60,7 +60,7 @@ Once in a while you can upgrade the server.
 
 ![Upgrade](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b5i8atmju8xoyjdo0555.png)
 
-####File & Directory Management
+#### File & Directory Management
 
 **ls (List)**
 Lists directory contents.
@@ -125,14 +125,14 @@ Copy directories: Use the `-r` or `-R` (recursive) flag to copy folders: `cp -r 
 
 **scp(Secure Copy Protocol)** is a Linux command-line utility used to securely transfer files and directories between a local host and a remote host, or between two remote hosts.  It operates over an SSH (Secure Shell) connection, ensuring that all data is encrypted during transit.
 
-#####Key Syntax and Usage
+##### Key Syntax and Usage
 The general syntax is `scp [options] source destination`. The source and destination can be local paths or remote paths formatted as `[user@]host:/path`. 
 
 - Local to Remote: `scp file.txt user@remote_host:/remote/path/`
 - Remote to Local: `scp user@remote_host:/remote/file.txt ./local/path/`
 - Remote to Remote: `scp user@host1:/path/file.txt user@host2:/path/` 
 
-#####Common Options
+##### Common Options
 
 `-r`: Recursively copy entire directories. 
 `-P port`: Specify a non-standard SSH port (note the capital P). 
@@ -142,7 +142,7 @@ The general syntax is `scp [options] source destination`. The source and destina
 
 To copy files from a Linux server to a Windows machine using SCP, you must run the command from the Windows machine to "pull" the file, as Windows typically does not run an SSH server by default. 
 
-#####_Using Built-in OpenSSH (Windows 10/11)_
+##### _Using Built-in OpenSSH (Windows 10/11)_
 
 Modern Windows versions include a native SCP client. Open Command Prompt or PowerShell and use the following syntax:
 
@@ -190,7 +190,7 @@ Shows current username.
 
 ![whoami](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0kzf0b7qsx1f4qin2b3s.png)
 
-#####Networking
+##### Networking
 
 `ssh`
 Remote login.
@@ -217,14 +217,14 @@ Firewall management.
 
 ![ufw](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xa1fo7reodaou6nv4268.png)
 
-#####Package Management
+##### Package Management
 `apt` (Debian/Ubuntu)
 `apt update`
 `apt install nginx`
 
 ![update linux server](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fsrdbsdjobe1h1qjcpyd.png)
 
-#####System Monitoring & Performance
+##### System Monitoring & Performance
 
 `top` / `htop`
 Process monitoring.
@@ -257,7 +257,7 @@ Kernel messages.
 `shutdown` / `reboot`
 System power control.
 
-#####User Management
+##### User Management
 `useradd` → add a new user to the linux server
 
 `userdel` → remove a user from the server
@@ -266,7 +266,7 @@ System power control.
 
 `passwd` → Change password.
 
-#####Miscellaneous
+##### Miscellaneous
 
 `history`
 Displays command history.
@@ -281,7 +281,7 @@ Exits the session.
 
 ![Exit session](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/66hxeqtygl1cpzkmtg9b.png)
 
-##Vim
+## Vim
 Vim (short for Vi IMproved) is a free and open-source text editor originally created by Bram Moolenaar in 1991 as an enhanced version of the classic vi editor.  It is widely used for software development, system administration, and general text editing, particularly within Unix-like environments (Linux, BSD, macOS) where it is often pre-installed. 
 
 Vim is characterized by its modal editing approach, which distinguishes between modes such as **Normal** (for navigation and commands) and **Insert** (for typing text), allowing users to edit efficiently using only the keyboard without relying on a mouse.  It is highly configurable and extensible through plugins and scripting, supports syntax highlighting, and runs in both terminal and graphical (gVim) interfaces.
